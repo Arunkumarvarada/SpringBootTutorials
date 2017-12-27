@@ -6,6 +6,10 @@ public class Topic {
 	private String topicname;
 	private String topicDescription;
 
+	public Topic() {
+		super();
+	}
+
 	public String getTopic() {
 		return topic;
 	}
