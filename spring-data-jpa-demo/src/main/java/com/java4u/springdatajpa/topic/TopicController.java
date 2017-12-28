@@ -1,4 +1,4 @@
-package com.java4u.springbootstarter.topic;
+package com.java4u.springdatajpa.topic;
 
 import java.util.List;
 
@@ -20,23 +20,23 @@ public class TopicController {
 		return topicService.getAllTopics();
 	}
 
-//	@RequestMapping("/topics/{id}")
-//	public Topic getTopic(@PathVariable String id) {
-//		return topicService.getTopicById(id);
-//	}
+	@RequestMapping("/topics/{id}")
+	public Topic getTopic(@PathVariable String id) {
+		return topicService.getTopicById(id);
+	}
 
 	@RequestMapping(method = RequestMethod.POST, value = "/topics")
 	public void createTopic(@RequestBody Topic topic) {
 		topicService.addTopic(topic);
 	}
 
-//	@RequestMapping(method = RequestMethod.PUT, value = "/topics/{id}")
-//	public void updateTopic(@RequestBody Topic topic, @PathVariable String id) {
-//		topicService.updateTopic(topic, id);
-//	}
-//
-//	@RequestMapping(method = RequestMethod.DELETE, value = "/topics/{id}")
-//	public void deleteTopic(@PathVariable String id) {
-//		topicService.deleteTopic(id);
-//	}
+	@RequestMapping(method = RequestMethod.PUT, value = "/topics/{id}")
+	public void updateTopic(@RequestBody Topic topic, @PathVariable String id) {
+		topicService.updateTopic(topic, id);
+	}
+
+	@RequestMapping(method = RequestMethod.DELETE, value = "/topics/{id}")
+	public void deleteTopic(@PathVariable String id) {
+		topicService.deleteTopic(id);
+	}
 }

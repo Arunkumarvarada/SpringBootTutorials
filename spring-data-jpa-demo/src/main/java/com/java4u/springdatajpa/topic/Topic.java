@@ -1,4 +1,4 @@
-package com.java4u.springbootstarter.topic;
+package com.java4u.springdatajpa.topic;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
